@@ -116,7 +116,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\r\n\r\nconsole.log(\"Heloo !\")\r\n\r\ndocument.querySelector(\"form\").addEventListener(\"submit\",todolist);\r\n    var todoarr= JSON.parse(localStorage.getItem(\"todo\")) || [];\r\n    creattable(todoarr);\r\n\r\n    function todolist(event){\r\n        event.preventDefault();\r\n        document.querySelector(\"tbody\").innerHTML=\"\";\r\n        var itemname=document.querySelector(\"#item\").value;\r\n        var itemqty=document.querySelector(\"#qty\").value;\r\n\r\n        var list={name:itemname,quanity:itemqty};\r\n        todoarr.push(list);\r\n        localStorage.setItem(\"todo\",JSON.stringify(todoarr));\r\n        creattable(todoarr);\r\n    }\r\n\r\n    function creattable(todoarr){\r\n        document.querySelector(\"tbody\").innerHTML=\"\";\r\n        todoarr.map(function (objects,index){\r\n            var tr=document.createElement(\"tr\");\r\n\r\n            var td =document.createElement(\"td\");\r\n            td.textContent=objects.name;\r\n\r\n            var td1=document.createElement(\"td\");\r\n            td1.textContent=objects.quanity;\r\n\r\n            var td2=document.createElement(\"td\");\r\n            td2.textContent= \"Delete\";\r\n            td2.addEventListener(\"click\",function(){\r\n                deleteitem(index);\r\n            })\r\n\r\n            tr.append(td,td1,td2);\r\n            document.querySelector(\"tbody\").append(tr);\r\n        });\r\n    }\r\n    function deleteitem(index){\r\n        todoarr.splice(index,1);\r\n        localStorage.setItem(\"todo\",JSON.stringify(todoarr));\r\n        creattable(todoarr);\r\n    }\n\n//# sourceURL=webpack://assignment/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _logo_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logo/logo.png */ \"./src/logo/logo.png\");\n\r\n\r\n\r\nconsole.log(\"Heloo !\")\r\n\r\nconst pic = document.getElementById('logo');\r\n\r\nconst img = document.createElement('img');\r\nimg.src = _logo_logo_png__WEBPACK_IMPORTED_MODULE_1__;\r\n\r\npic.append(img);\r\n\r\ndocument.querySelector(\"form\").addEventListener(\"submit\",todolist);\r\n    var todoarr= JSON.parse(localStorage.getItem(\"todo\")) || [];\r\n    creattable(todoarr);\r\n\r\n    function todolist(event){\r\n        event.preventDefault();\r\n        document.querySelector(\"tbody\").innerHTML=\"\";\r\n        var itemname=document.querySelector(\"#item\").value;\r\n        var itemqty=document.querySelector(\"#qty\").value;\r\n\r\n        var list={name:itemname,quanity:itemqty};\r\n        todoarr.push(list);\r\n        localStorage.setItem(\"todo\",JSON.stringify(todoarr));\r\n        creattable(todoarr);\r\n    }\r\n\r\n    function creattable(todoarr){\r\n        document.querySelector(\"tbody\").innerHTML=\"\";\r\n        todoarr.map(function (objects,index){\r\n            var tr=document.createElement(\"tr\");\r\n\r\n            var td =document.createElement(\"td\");\r\n            td.textContent=objects.name;\r\n\r\n            var td1=document.createElement(\"td\");\r\n            td1.textContent=objects.quanity;\r\n\r\n            var td2=document.createElement(\"td\");\r\n            td2.textContent= \"Delete\";\r\n            td2.addEventListener(\"click\",function(){\r\n                deleteitem(index);\r\n            })\r\n\r\n            tr.append(td,td1,td2);\r\n            document.querySelector(\"tbody\").append(tr);\r\n        });\r\n    }\r\n    function deleteitem(index){\r\n        todoarr.splice(index,1);\r\n        localStorage.setItem(\"todo\",JSON.stringify(todoarr));\r\n        creattable(todoarr);\r\n    }\n\n//# sourceURL=webpack://assignment/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/logo/logo.png":
+/*!***************************!*\
+  !*** ./src/logo/logo.png ***!
+  \***************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"357df31355f8fe6c9094.png\";\n\n//# sourceURL=webpack://assignment/./src/logo/logo.png?");
 
 /***/ })
 
@@ -171,6 +181,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ind
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -185,6 +207,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ind
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

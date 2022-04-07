@@ -1,6 +1,14 @@
 import "./index.css";
+import Logo from "./logo/logo.png"
 
 console.log("Heloo !")
+
+const pic = document.getElementById('logo');
+
+const img = document.createElement('img');
+img.src = Logo;
+
+pic.append(img);
 
 document.querySelector("form").addEventListener("submit",todolist);
     var todoarr= JSON.parse(localStorage.getItem("todo")) || [];
