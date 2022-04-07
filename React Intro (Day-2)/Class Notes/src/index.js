@@ -22,7 +22,7 @@ const root = document.getElementById('root');
 
 // -----------------React Syntax ---------------//
 
-// const h1 = React.createElement("h1", { className: "redtext" }, "Hello World from React !")
+// const h1 = React.createElement("h1", { className: "redtext", id: "uniqID" }, "Hello World from React !")
 
 // const div = React.createElement("div", {}, "New Div");
 
@@ -47,7 +47,7 @@ const root = document.getElementById('root');
 ReactDOM.render(
     // p, // What
     <div>
-        <h1 className="bold">Hello React !!!!!!!!!!!</h1>
+        <h1 className="bold">! Hello React !</h1>
         <img
             src="https://picsum.photos/536/354"
             width="600px" />
