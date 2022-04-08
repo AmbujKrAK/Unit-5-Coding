@@ -12,8 +12,9 @@ function App() {
   return (
     <div className="App">
 
-      <Fun heading={heading1} item={phone} />
+      {/* ------------As in below function we have mention heading and item so we here are specifying the heading as heading1 and heading2 and simmilarly with item . -----------*/}
 
+      <Fun heading={heading1} item={phone} /> 
       <Fun heading={heading2} item={manufacturers} />
 
     </div>
@@ -21,6 +22,8 @@ function App() {
 }
 
 // Components 
+
+// Below function will give data in the specified formate if invoked, however we have to mention the paraments - eg : props.heading so we have to specify that in above tag heading is something, similarly with props.items.
 
 function Fun(props) {
   return (
