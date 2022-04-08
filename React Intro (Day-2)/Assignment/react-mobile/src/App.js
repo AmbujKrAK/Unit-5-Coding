@@ -11,24 +11,28 @@ function App() {
 
   return (
     <div className="App">
-      <div><h1>{heading1}</h1></div>
 
-      <ul>
-        {phone.map((el) => {
-          return <li>{el}</li>
-        })}
-      </ul>
+      <Fun heading={heading1} item={phone} />
 
-      <div><h1>{heading2}</h1></div>
-
-      <ul>
-        {manufacturers.map((el) => {
-          return <li>{el}</li>
-        })}
-      </ul>
+      <Fun heading={heading2} item={manufacturers} />
 
     </div>
   );
 }
+
+// Components 
+
+function Fun(props) {
+  return (
+    <div>
+      <h3>{props.heading}</h3>
+      <ul>
+        {props.item.map((el) => {
+          return <li>{el}</li>
+        })}
+      </ul>
+    </div>
+  )
+};
 
 export default App;
