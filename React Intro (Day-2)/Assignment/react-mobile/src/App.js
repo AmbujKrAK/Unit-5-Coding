@@ -1,4 +1,7 @@
 
+// ****************************** All the HTML part will go in this page  ******************************************//
+
+
 import './App.css';
 
 function App() {
