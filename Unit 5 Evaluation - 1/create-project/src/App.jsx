@@ -63,7 +63,7 @@ function App() {
       <div className="addWicket">
         Add Wicket
         {/* Increase the count of wicket */}
-        <button>Add 1 wicket</button>
+        <button className="addWicket" onClick={()=>{scoreHandler("Wicket",+1)}}>Add 1 wicket</button>
       </div>
 
       <div className="addBall">
