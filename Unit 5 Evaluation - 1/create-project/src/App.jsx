@@ -26,15 +26,16 @@ function App() {
     setScr(res);
     
 }
-var ow = "";
+let ow = "";
 if(scr.Score>100){
   ow = "India Won"
 }
 
-var wic ="";
+let wic ="";
 if(scr.Wicket>=12){
   wic = " All Out! "
 }
+
   return (
     <div className="App">
       <h3>India:
@@ -60,13 +61,14 @@ if(scr.Wicket>=12){
         </div>
 
         <div>
-          Over:{" "}
+          Over:{Math.floor(src.Ball/6)+"."(src.Ball%6)}
           <h1 className="overCount">
             {
               // Show Over here in the format: "over.ball" eg: 4.5 means 4th over and 5th ball
               // if 1 more ball is thrown then over is now 5.0
               // you have to write logic to form this string from current ball number.
-              (scr.Ball)
+              // (scr.Ball)
+              Math.floor(src.Ball/6)+"."+(src.Ball%6)
             }
           </h1>
         </div>
