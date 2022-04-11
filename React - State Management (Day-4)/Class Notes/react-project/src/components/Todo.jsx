@@ -1,8 +1,8 @@
 
 import { useState } from "react";
 import { TodoInput } from "./TodoInput";
-import { TodoItem } from "./TodoItem";
-import {nanoid} from "nanoid"
+import { TodoItem } from "./TodoItems";
+import { nanoid } from "nanoid"
 
 function Todo() {
 
@@ -13,15 +13,21 @@ function Todo() {
             title: todo,
             status: false,
             id: nanoid(5),
-        };
+        }
         setTodoList([...todoList, payload]);
     };
-     
+
+    const handleStatus = (id) => {
+        setTodoList([
+            ...todoList.map((e) => (e.id === id ? { ...e, status: !e.status } : e)),
+        ]);
+    };
+
     return (
         <div>
             <TodoInput getData={getData} />
             {todoList.map((e) => (
-                <TodoItem>todo{e}</TodoItem>
+                <TodoItem handleStatus={handleStatus} todo={e}></TodoItem>
             ))}
         </div>
     )
