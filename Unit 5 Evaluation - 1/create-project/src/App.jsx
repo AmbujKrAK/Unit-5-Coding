@@ -13,7 +13,7 @@ function App() {
     if(scr.Score > 100){
       return
     }
-    if(scr.Wicket >= 10){
+    if(scr.Wicket >= 12){
       return
     }
     let m = {};
@@ -28,11 +28,11 @@ function App() {
 }
 var ow = "";
 if(scr.Score>100){
-  ow = " Won "
+  ow = "India Won"
 }
 
 var wic ="";
-if(scr.Wicket>=10){
+if(scr.Wicket>=12){
   wic = " All Out! "
 }
   return (
