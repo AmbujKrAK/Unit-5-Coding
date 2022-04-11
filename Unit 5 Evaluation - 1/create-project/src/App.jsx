@@ -68,7 +68,7 @@ if(scr.Wicket>=12){
               // if 1 more ball is thrown then over is now 5.0
               // you have to write logic to form this string from current ball number.
               // (scr.Ball)
-              Math.floor(src.Ball/6)+"."+(src.Ball%6)
+              Math.floor(scr.Ball/6)+"."+(scr.Ball%6)
             }
           </h1>
         </div>
