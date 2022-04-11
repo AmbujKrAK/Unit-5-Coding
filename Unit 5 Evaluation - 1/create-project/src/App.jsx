@@ -61,7 +61,7 @@ if(scr.Wicket>=12){
         </div>
 
         <div>
-          Over:{Math.floor(src.Ball/6)+"."(src.Ball%6)}
+        Over:{Math.floor(scr.Ball/6)+"."+(scr.Ball%6)}
           <h1 className="overCount">
             {
               // Show Over here in the format: "over.ball" eg: 4.5 means 4th over and 5th ball
