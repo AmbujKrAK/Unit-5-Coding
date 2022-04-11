@@ -10,7 +10,10 @@ function App() {
 
    
    function scoreHandler(str,value){
-    if(scr.Score>100){
+    if(scr.Score > 100){
+      return
+    }
+    if(scr.Wicket >= 10){
       return
     }
     let m = {};
@@ -23,9 +26,14 @@ function App() {
     setScr(res);
     
 }
-var ow ="";
+var ow = "";
 if(scr.Score>100){
-  ow = "Won"
+  ow = " Won "
+}
+
+var wic ="";
+if(scr.Wicket>=10){
+  wic = " All Out! "
 }
   return (
     <div className="App">
@@ -42,7 +50,7 @@ if(scr.Score>100){
           </h1>
         </div>
         <div>
-          Wicket:{" "}
+          Wicket:{wic}
           <h1 className="wicketCount">
             {
               // show wicket here
