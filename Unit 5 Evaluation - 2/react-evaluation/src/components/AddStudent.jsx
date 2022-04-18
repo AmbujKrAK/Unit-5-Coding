@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
-
+import { useState } from "react";
+import "./AddStudent.css";
 export const AddStudent = () => {
+  const [error, seterror] = useState(false)
   const [formData,setform]=useState({
     first_name:"",
     last_name:"",
     email:"",
-    gender:"",
-    age:"",
-    tenth_score:"",
-    twelth_score:"",
-    preferred_branch:"",
+    gender:0,
+    age: 0,
+    tenth_score: 0,
+    twelth_score:0 ,
+    preferred_branch: 0,
   });
   const handlechange=(e)=>{
     const {name,value} = e.target;
@@ -17,14 +18,19 @@ export const AddStudent = () => {
         ...formData,
         [name]:value,
     })
-    console.log(formData)
 }
   async function postdata(formData){
-    var data2 = await fetch("http://localhost:8080/students",{
+    if(formData.age>=100 || formData.first_name==="" || formData.twelth_score >=100 || formData.tenth_score>=100 ){
+      seterror(true);
+      return ;
+    }else{
+      var data2 = await fetch("http://localhost:8080/students",{
       method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
     })
+    }
+    
   }
 
 
@@ -132,7 +138,7 @@ export const AddStudent = () => {
 
       <input className="submit" type="submit" value="Submit" onClick={()=>{postdata(formData)}}/>
       {
-        // <div className="error"></div>
+        <div className="error"> {error ? "fill the form properly" : null}</div>
         // show this div with proper error before submitting form, if there's anything not provided
         // eg: first name missing, age cannot be greater than 100 etc
       }
