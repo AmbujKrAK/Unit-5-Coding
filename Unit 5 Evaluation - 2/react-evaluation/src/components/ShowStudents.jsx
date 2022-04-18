@@ -1,4 +1,16 @@
+import { useEffect } from "react";
+
 export const ShowStudents = () => {
+useEffect(()=>{
+  async function getData(){
+    var data = await fetch("http://localhost:8080/students")
+    var res = await data.json();
+  }
+})
+
+
+
+
   return (
     <div>
       <div className="controls">
