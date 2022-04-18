@@ -38,7 +38,7 @@ export const ShowStudents = () => {
         </div>
         <button className="sort">sort</button>
       </div>
-      <table className="table">
+      <table className="table" border="1">
         <thead>
           <tr>
             <th>First Name</th>
