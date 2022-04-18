@@ -87,6 +87,17 @@
       "tenth_score": 43,
       "twelth_score": 74,
       "preferred_branch": "commerce"
+    },
+    {
+      "first_name": "Ambuj",
+      "last_name": "Kumar",
+      "email": "ankitambuj02dbz@gmail.com",
+      "gender": "male",
+      "age": "25",
+      "tenth_score": "80",
+      "twelth_score": "100",
+      "preferred_branch": "commerce",
+      "id": 9
     }
   ]
 }
