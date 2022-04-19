@@ -25,7 +25,7 @@ export const AddStudent = () => {
       return ;
     }else{
       var data2 = await fetch("http://localhost:8080/students",{
-      method: 'POST',
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
     })
