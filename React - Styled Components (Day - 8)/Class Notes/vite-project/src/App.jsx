@@ -1,11 +1,16 @@
 import { useState } from 'react'
-import { Button } from './components/button'
+// import Button from './components/button'
+import './App.css'
+// import Flex from "./components/Flex";
+
+
 function App() {
+  const [theme, setTheme] = useState('dark')
   return (
     <div className="App">
-      <div>Hello World!</div>
+      <h1>Hello World!</h1>
 
-      <Button
+      {/* <Button
         onClick={() => {
           alert('Clicked')
         }}
@@ -27,7 +32,25 @@ function App() {
         }}
       >
         Add One
-      </Button>
+      </Button> */}
+
+      {/* <h3>Theme is {theme}</h3>
+
+      {/* <Flex>
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+      </Flex> */}
+
+      {/* <Button */}
+      {/* //   onClick={(theme) => { */}
+      {/* //     setTheme(theme === 'light' ? 'dark' : 'light') */}
+      {/* //   }} */}
+      {/* // > */}
+      {/* //   Change Theme */}
+      {/* // </Button> */} 
+      <button> Ant Component</button>
+
     </div>
   )
 }
