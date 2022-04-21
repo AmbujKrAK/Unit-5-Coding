@@ -5,7 +5,7 @@ import { Navbar } from './components/navbar'
 import { LangContext } from './contexts/LanguageContext'
 
 function App() {
-  const x = useContext(LangContext);
+  const {handleLang} = useContext(LangContext);
   return (
     <div className="App">
       <button onClick={()=>{
