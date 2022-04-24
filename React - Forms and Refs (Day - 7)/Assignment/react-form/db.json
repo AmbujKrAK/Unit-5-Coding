@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "name": "Ambuj Kumar",
+      "address": "Bhuiyan Toli, Samlong, Ranchi, Jharkhand",
+      "age": "25",
+      "salary": "0",
+      "married": "No",
+      "department": "Elite",
+      "id": 1
+    },
+    {
+      "name": "Ankit",
+      "age": "25",
+      "address": "asdsa",
+      "department": "C",
+      "salary": "1232134",
+      "married": "Yes",
+      "id": 2
+    },
+    {
+      "name": "Ankit",
+      "age": "25",
+      "address": "asdsa",
+      "department": "C",
+      "salary": "1232134",
+      "married": "Yes",
+      "id": 3
+    },
+    {
+      "name": "Ankit",
+      "age": "25",
+      "address": "asdsa",
+      "department": "C",
+      "salary": "1232134",
+      "married": "Yes",
+      "id": 4
+    },
+    {
+      "name": "Ankit",
+      "age": "25",
+      "address": "asdsa",
+      "department": "C",
+      "salary": "1232134",
+      "married": "Yes",
+      "id": 5
+    },
+    {
+      "name": "Ankit",
+      "age": "25",
+      "address": "asdsa",
+      "department": "C",
+      "salary": "1232134",
+      "married": "Yes",
+      "id": 6
+    }
+  ]
+}
