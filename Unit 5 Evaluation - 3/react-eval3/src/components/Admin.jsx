@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 export const Admin = () => {
+  const [data,  setdata] = useState({
+
+  })
+  
   return (
     <form className="createEmployee">
       <input type="text" placeholder="Employee Name" name="employee_name" />

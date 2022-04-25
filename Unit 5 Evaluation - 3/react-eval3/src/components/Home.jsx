@@ -1,4 +1,10 @@
+import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "../context/Usercontex";
+
 export const Home = () => {
+
+  const {total} = useContext(UserContext);
   // create statistics for user.
   // get Total user count from DB,
   // other fields are in memory values stored in context API.
@@ -10,6 +16,19 @@ export const Home = () => {
   //   terminated: 0, // inc when user in terminated
   //   promoted: 0,// inc when user in promoted
   //   total_new: 0,// inc when a new user in created
+  const [data , setdata] = useState ([]);
+
+  useEffect(()=>{
+    async function getdata(){
+      var data = await fetch("http://localhost:8080/employee")
+      var res = await data.json();
+      setdata(res)
+    }
+    getdata()
+    
+  },[]);
+  
+  console.log(total)
 
   return (
     <>
@@ -17,16 +36,16 @@ export const Home = () => {
       <div className="home">
         <span>Stats</span>
         <div>
-          Total Employees<span className="totalemp"></span>
+          Total Employees<span className="totalemp">{data.length}</span>
         </div>
         <div>
-          Total Terminated: <span className="total_terminated"></span>
+          Total Terminated: <span className="total_terminated">{total.terminated}</span>
         </div>
         <div>
-          Total Promoted: <span className="total_promoted"></span>
+          Total Promoted: <span className="total_promoted">{total.promoted}</span>
         </div>
         <div>
-          Total New: <span className="total_new"></span>
+          Total New: <span className="total_new">{total.total_new}</span>
         </div>
       </div>
     </>
