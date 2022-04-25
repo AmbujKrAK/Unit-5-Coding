@@ -36,7 +36,7 @@ export const Home = () => {
       <div className="home">
         <span>Stats</span>
         <div>
-          Total Employees<span className="totalemp">{data.length}</span>
+          Total Employees: <span className="totalemp">{data.length}</span>
         </div>
         <div>
           Total Terminated: <span className="total_terminated">{total.terminated}</span>
