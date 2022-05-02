@@ -1,4 +1,5 @@
 export const NewOrder = () => {
+  
   // Get data of only this user. store it in redux
   // GET /orders?owner_name=john will give you all order of user john
   //  on submit click create a new order, new order has status `Not Accepted`
@@ -34,6 +35,7 @@ export const NewOrder = () => {
         {/* it's just a toggle of redux state something like `showUnfinished`  */}
         <button className="filter">
           {/* Text should change like:   Show {showUnfinished ? "all" : "Only unfinished"} */}
+          Show only Finished
         </button>
 
         {/* Here create a div for every oreder, filter them before based on `showUnfinished` */}

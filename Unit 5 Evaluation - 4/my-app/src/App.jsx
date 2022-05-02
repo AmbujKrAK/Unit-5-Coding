@@ -9,8 +9,7 @@ import { Route, Routes } from 'react-router-dom';
 import "./App.css"
 
 function App() {
-  const auth  = false;
-
+ const auth = false;
   return (
     <div className="App">
       <div>
@@ -36,9 +35,8 @@ function App() {
         <Route path='/' element= {<Home/>}></Route>
         <Route path='/login' element= {<Login/>}></Route>
         <Route path='/logout' element= {<Logout/>}></Route>
-        {/* <Route path='/orders' element= {<ProtectedRoute login={login}>
-          <EmployeeDetails /> 
-        </ProtectedRoute>}></Route> */}
+        <Route path='/orders' element= {<Orders/>}></Route>
+        <Route path='/neworder' element= {<NewOrder/>}></Route>
       
       </Routes>
     </div>
