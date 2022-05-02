@@ -35,7 +35,6 @@ export const NewOrder = () => {
         {/* it's just a toggle of redux state something like `showUnfinished`  */}
         <button className="filter">
           {/* Text should change like:   Show {showUnfinished ? "all" : "Only unfinished"} */}
-          Show only Finished
         </button>
 
         {/* Here create a div for every oreder, filter them before based on `showUnfinished` */}
